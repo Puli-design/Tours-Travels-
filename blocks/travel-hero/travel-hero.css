@@ -1,0 +1,140 @@
+.travel-hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: #123c5a;
+}
+
+.travel-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  padding: 80px 7%;
+}
+
+.travel-hero-content h1 {
+  max-width: 650px;
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.travel-hero-content p {
+  max-width: 520px;
+  margin: 0 0 32px;
+  color: #f3f7fa;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.travel-hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 30px;
+  background: #f4a340;
+  color: #7cbd88;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.travel-hero-button:hover {
+  background: #d98420;
+  transform: translateY(-2px);
+}
+
+.travel-hero-media {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58%;
+  height: 100%;
+}
+
+.travel-hero-media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #123c5a 0%,
+    rgba(18, 60, 90, 0.8) 18%,
+    rgba(18, 60, 90, 0.1) 70%
+  );
+  content: '';
+}
+
+.travel-hero-media picture,
+.travel-hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.travel-hero-media img {
+  object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .travel-hero {
+    min-height: 620px;
+  }
+
+  .travel-hero-content {
+    width: 65%;
+    padding: 60px 6%;
+  }
+
+  .travel-hero-media {
+    width: 70%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .travel-hero {
+    min-height: 680px;
+    align-items: flex-end;
+  }
+
+  .travel-hero-content {
+    width: 100%;
+    padding: 230px 24px 48px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(18, 60, 90, 0.85) 35%,
+      #123c5a 100%
+    );
+  }
+
+  .travel-hero-content h1 {
+    font-size: 44px;
+  }
+
+  .travel-hero-content p {
+    font-size: 17px;
+  }
+
+  .travel-hero-media {
+    width: 100%;
+    height: 58%;
+  }
+
+  .travel-hero-media::after {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 60, 90, 0.1) 0%,
+      rgba(18, 60, 90, 0.35) 60%,
+      #123c5a 100%
+    );
+  }
+}
