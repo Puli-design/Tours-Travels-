@@ -73,7 +73,7 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: rgb(61, 83, 114);
   color: rgb(67, 155, 74);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
